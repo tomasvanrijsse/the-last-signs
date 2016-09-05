@@ -37,3 +37,19 @@ $on-laptop:        800px;
 
 // Import partials from the `minima` theme.
 @import "minima";
+
+span.verse-no {
+    color: $grey-color;
+}
+
+.compact-show {
+    display:none;
+}
+body.compact {
+    .verse-no, .compact-hidden {
+        display:none;
+    }
+    .compact-show {
+        display:inline-block;
+    }
+}
