@@ -3,16 +3,17 @@ layout: default
 ---
 
 <div class="home">
+    <h1>De laatste tekenen</h1>
+    <p>Het doel van deze site is om de profetische bijbelteksten over de eindtijd begrijpelijker te maken. Daarbij probeer ik te focussen om de tekenen die als laatste zullen gebeuren voordat Gods eeuwige rijk komt.</p>
 
-  <h1 class="page-heading">Hoofdstukken</h1>
+    <h1 class="page-heading">Hoofdstukken</h1>
 
-  <ul class="post-list">
-    {% for chapter in site.chapters %}
-      <li>
-        <span class="post-meta">{{ chapter.title }}</span>
-        {{ chapter.content }}
-      </li>
-    {% endfor %}
-  </ul>
+    <ul class="post-list">
+        {% for chapter in site.chapters %}
+        <li>
+            <a  href="{{ chapter.url | prepend: site.baseurl }}">{{ chapter.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
 
 </div>

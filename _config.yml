@@ -28,4 +28,6 @@ markdown: kramdown
 theme: minima
 
 collections:
-- chapters
+  chapters:
+    output: true
+    permalink: /chapters/:path/

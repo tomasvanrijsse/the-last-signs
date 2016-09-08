@@ -42,14 +42,30 @@ span.verse-no {
     color: $grey-color;
 }
 
-.compact-show {
-    display:none;
-}
-body.compact {
-    .verse-no, .compact-hidden {
-        display:none;
+#chapter {
+    > div {
+        float:left;
+        width: 50%;
     }
-    .compact-show {
-        display:inline-block;
+
+    .original:not(.organized) {
+        br {display: none;}
+        p {
+            margin:0;
+            display: inline;
+        }
+        ol, ul {
+            margin:0;
+            display: inline;
+            li {
+                display: inline;
+                list-style: none;
+            }
+        }
+    }
+    .conclusion {
+        .verse-no {
+            display: none;
+        }
     }
 }
