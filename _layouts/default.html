@@ -3,17 +3,43 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <title>{{ page.title }}</title>
-    <!-- Homepage CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
     <link rel="stylesheet" href="/css/main.css" type="text/css"/>
 </head>
 <body>
 
-
-<div class="site">
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">De laatste tekenen</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+                {% for chapter in site.chapters %}
+                <a href="{{ chapter.url | prepend: site.baseurl }}" class="mdl-navigation__link">{{ chapter.title }}</a>
+                {% endfor %}
+            </nav>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Title</span>
+        <nav class="mdl-navigation">
+            {% for chapter in site.chapters %}
+            <a href="{{ chapter.url | prepend: site.baseurl }}" class="mdl-navigation__link">{{ chapter.title }}</a>
+            {% endfor %}
+        </nav>
+    </div>
 
     {{ content }}
-
+    
 </div>
 
+
+<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 </body>
 </html>

@@ -1,19 +1,22 @@
 ---
-layout: default
+layout: home
 ---
 
-<div class="home">
-    <h1>De laatste tekenen</h1>
-    <p>Het doel van deze site is om de profetische bijbelteksten over de eindtijd begrijpelijker te maken. Daarbij probeer ik te focussen om de tekenen die als laatste zullen gebeuren voordat Gods eeuwige rijk komt.</p>
-
-    <h1 class="page-heading">Hoofdstukken</h1>
-
-    <ul class="post-list">
-        {% for chapter in site.chapters %}
-        <li>
-            <a  href="{{ chapter.url | prepend: site.baseurl }}">{{ chapter.title }}</a>
-        </li>
-        {% endfor %}
-    </ul>
-
+<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">Welcome</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+        Het doel van deze site is om de profetische bijbelteksten over de eindtijd begrijpelijker te maken. Daarbij probeer ik te focussen op de tekenen die als laatste zullen gebeuren voordat Gods eeuwige rijk komt.
+    </div>
+    <!--<div class="mdl-card__actions mdl-card&#45;&#45;border">
+        <a class="mdl-button mdl-button&#45;&#45;colored mdl-js-button mdl-js-ripple-effect">
+            Get Started
+        </a>
+    </div>
+    <div class="mdl-card__menu">
+        <button class="mdl-button mdl-button&#45;&#45;icon mdl-js-button mdl-js-ripple-effect">
+            <i class="material-icons">share</i>
+        </button>
+    </div>-->
 </div>

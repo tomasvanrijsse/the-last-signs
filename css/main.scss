@@ -20,50 +20,76 @@ $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-// Minima also includes a mixin for defining media queries.
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-
-// Import partials from the `minima` theme.
-@import "minima";
 
 span.verse-no {
     color: $grey-color;
 }
 
 #chapter {
-    > div {
-        float:left;
-        width: 50%;
+    > .chapter-ribbon {
+        width: 100%;
+        height: 300px;
+        background-color: #3F51B5;
+        -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+
+        h1 {
+            color: white;
+            margin: 0;
+        }
     }
 
-    .original:not(.organized) {
-        br {display: none;}
-        p {
-            margin:0;
-            display: inline;
+    > .chapter-main {
+        margin-top: -215px;
+        -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+
+        .mdl-cell {
+            padding: 35px;
+            margin-bottom: 40px;
         }
-        ol, ul {
-            margin:0;
-            display: inline;
-            li {
+
+    }
+
+    .original, .conclusion {
+        position: relative;
+        padding-top:10px;
+        &:before {
+            position:absolute;
+            top:-15px;
+            left:-15px;
+            color:#BBB;
+        }
+    }
+
+    .original {
+        &:before {
+            content: "#Origineel";
+        }
+        :not(.organized) {
+            br {
+                display: none;
+            }
+            p {
+                margin: 0;
                 display: inline;
-                list-style: none;
+            }
+            ol, ul {
+                padding: 0;
+                display: inline;
+                li {
+                    display: inline;
+                    list-style: none;
+                }
             }
         }
     }
     .conclusion {
+        &:before {
+            content: "#Samenvatting"
+        }
         .verse-no {
             display: none;
         }
