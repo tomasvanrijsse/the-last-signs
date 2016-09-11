@@ -47,7 +47,7 @@ span.verse-no {
         flex-shrink: 0;
 
         .mdl-cell {
-            padding: 35px;
+            padding: 45px 35px 35px;
             margin-bottom: 40px;
         }
 
@@ -58,7 +58,7 @@ span.verse-no {
         padding-top:10px;
         &:before {
             position:absolute;
-            top:-15px;
+            top:-25px;
             left:-15px;
             color:#BBB;
         }
@@ -68,7 +68,18 @@ span.verse-no {
         &:before {
             content: "#Origineel";
         }
-        :not(.organized) {
+
+        .mdl-switch {
+            position: absolute;
+            right:0px;
+            top:-25px;
+            width:120px;
+            span {
+                font-size:14px;
+            }
+        }
+
+        &:not(.organized) {
             br {
                 display: none;
             }
