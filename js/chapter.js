@@ -7,6 +7,10 @@ $(function(){
         }
     });
 
+    if($('.align').length == 0){
+        $('#alignment-switch').parent().hide();
+    }
+
     $('.align').each(function(){
         var number = $(this).data('align-no');
         if($.isArray(alignableElements[number])== false){
