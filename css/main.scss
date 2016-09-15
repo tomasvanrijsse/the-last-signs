@@ -81,6 +81,32 @@ span.verse-no {
                 }
             }
         }
+        &.organized ol.timeline > li {
+            list-style: none;
+            position: relative;
+            padding-bottom:5px;
+            &:before {
+                content: "";
+                display: block;
+                background-color: #555;
+                width: 10px;
+                height: 10px;
+                border-radius: 5px;
+                position: absolute;
+                left: -15px;
+                top:7px;
+            }
+            &:after {
+                content: "";
+                display: block;
+                background-color: #555;
+                width: 2px;
+                height: 100%;
+                position: absolute;
+                left: -11px;
+                top:0px;
+            }
+        }
     }
     .summary {
         &:before {
