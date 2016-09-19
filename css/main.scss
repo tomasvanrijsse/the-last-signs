@@ -35,7 +35,7 @@ span.verse-no {
 
     }
 
-    .original, .summary {
+    #original, #summary {
         position: relative;
         padding-top:10px;
         &:before {
@@ -59,7 +59,7 @@ span.verse-no {
 
     }
 
-    .original {
+    #original {
         &:before {
             content: "#Origineel";
         }
@@ -82,7 +82,7 @@ span.verse-no {
             }
         }
     }
-    .summary {
+    #summary {
         &:before {
             content: "#Samenvatting"
         }
@@ -96,7 +96,7 @@ span.verse-no {
         }
     }
 
-    .summary , .original.organized {
+    #summary , #original.organized {
         ol.timeline > li {
 
             list-style: none;
