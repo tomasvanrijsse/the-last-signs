@@ -1,9 +1,9 @@
 $(function(){
     $('#organized-switch').on('change',function(){
         if($(this).is(':checked')){
-            $('.original').addClass('organized');
+            $('#original').addClass('organized');
         } else {
-            $('.original').removeClass('organized');
+            $('#original').removeClass('organized');
         }
     });
 
@@ -17,7 +17,7 @@ $(function(){
             alignableElements[number] = [];
         }
         alignableElements[number].push( $(this) );
-    })
+    });
 
     $('#alignment-switch').on('change',function(){
         if($(this).is(':checked')){
@@ -30,15 +30,15 @@ $(function(){
         }
     });
 
-    $original = $('.original');
-    $summary = $('.summary');
+    $original = $('#original');
+    $summary = $('#summary');
 });
 
 var alignableElements = {},
     lastSummaryWidth = 0,
     $summary, $original;
 function alignSummary(){
-    var summaryWidth = $('.summary').outerWidth();
+    var summaryWidth = $('#summary').outerWidth();
 
     // check if the state has change since the last alignment
     if(summaryWidth == lastSummaryWidth){
