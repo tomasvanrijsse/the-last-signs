@@ -30,6 +30,16 @@ $(function(){
         }
     });
 
+    $(".summary").wrap( "<div class='summary-container'></div>" );
+    $(".summary-container").each(function(){
+        var title = $(this).children('ul').prop('title');
+        $(this).prepend('<span>'+title+'</span>');
+    })
+    .on('click','> span',function(){
+        $(this).next().slideToggle();
+        $(this).parent().toggleClass('open');
+    });
+
     $original = $('#original');
     $summary = $('#summary');
 });
