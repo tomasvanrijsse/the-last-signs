@@ -178,3 +178,17 @@ span.verse-no {
         }
     }
 }
+
+#home {
+    margin:8px;
+    .mdl-card {
+        float:left;
+        margin:16px;
+        height: 285px;
+        display: flex;
+        flex-direction: column;
+        .mdl-card__supporting-text {
+            flex: 1;
+        }
+    }
+}
