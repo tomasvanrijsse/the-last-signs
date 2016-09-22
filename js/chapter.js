@@ -25,6 +25,7 @@ $(function(){
             $(window).on('resize.alignment',alignSummary);
         } else {
             $('.align').css('marginTop',0);
+            $('body').removeClass('aligned');
             $(window).off('resize.alignment');
             lastSummaryWidth = 0;
         }
@@ -63,8 +64,11 @@ function alignSummary(){
             elements[0].css('marginTop', '');
             elements[1].css('marginTop', '');
         });
+        $('body').removeClass('aligned');
         return true;
     }
+
+    $('body').addClass('aligned');
 
     // split view state
     $.each(alignableElements, function (i, elements) {
