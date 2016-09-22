@@ -30,4 +30,4 @@ theme: minima
 collections:
   chapters:
     output: true
-    permalink: /chapters/:path/
+    permalink: /hoofdstuk/:path/
