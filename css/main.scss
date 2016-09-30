@@ -191,13 +191,21 @@ span.verse-no {
 #home {
     margin:8px;
     .mdl-card {
-        float:left;
-        margin:16px;
+        float: left;
+        margin: 16px;
         height: 285px;
         display: flex;
         flex-direction: column;
         .mdl-card__supporting-text {
             flex: 1;
+        }
+
+        .warning {
+            position: absolute;
+            display: block;
+            color: #AAA;
+            right: 20px;
+            top: 20px;
         }
     }
 }

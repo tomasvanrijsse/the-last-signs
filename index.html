@@ -30,6 +30,12 @@ layout: home
 <div class="mdl-card mdl-shadow--2dp">
     <div class="mdl-card__title">
         <h2 class="mdl-card__title-text">{{ chapter.title }}</h2>
+        {% if chapter.date-unclear %}
+        <i id="warning{{ forloop.index }}" class="icon warning material-icons">report_problem</i>
+        <div class="mdl-tooltip" data-mdl-for="warning{{ forloop.index }}">
+            Er is geen referentie<br/>naar de eindtijd in deze tekst
+        </div>
+        {% endif %}
     </div>
     <div class="mdl-card__supporting-text">
         {{ chapter.excerpt }}
