@@ -19,6 +19,15 @@
     -webkit-font-smoothing: antialiased;
 }
 
+a.mdl-layout-title {
+    color:#FFF;
+    text-decoration: none;
+}
+.mdl-layout__drawer {
+    a.mdl-layout-title {
+        color:#444;
+    }
+}
 
 span.verse-no {
     color: #828282;
