@@ -5,8 +5,8 @@
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="/css/material.indigo-pink.min.css">
-    <link rel="stylesheet" href="/css/main.css" type="text/css"/>
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css" type="text/css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 <body>
@@ -16,13 +16,13 @@
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
             <!-- Title -->
-            <a href="/" class="mdl-layout-title">De laatste tekenen</a>
+            <a href="{{ site.baseurl }}/" class="mdl-layout-title">De laatste tekenen</a>
             <!-- Add spacer, to align navigation to the right -->
             <div class="mdl-layout-spacer"></div>
             <!-- Navigation. We hide it in small screens. -->
             <nav class="mdl-navigation mdl-layout--large-screen-only">
                 {% for chapter in site.chapters %}
-                <a href="{{ chapter.url | prepend: site.baseurl }}" class="mdl-navigation__link">{{ chapter.title }}</a>
+                <a href="{{ site.baseurl }}{{ chapter.url }}" class="mdl-navigation__link">{{ chapter.title }}</a>
                 {% endfor %}
             </nav>
         </div>
@@ -31,7 +31,7 @@
         <a href="/" class="mdl-layout-title">De laatste tekenen</a>
         <nav class="mdl-navigation">
             {% for chapter in site.chapters %}
-            <a href="{{ chapter.url | prepend: site.baseurl }}" class="mdl-navigation__link">{{ chapter.title }}</a>
+            <a href="{{ site.baseurl }}{{ chapter.url }}" class="mdl-navigation__link">{{ chapter.title }}</a>
             {% endfor %}
         </nav>
     </div>
@@ -41,15 +41,6 @@
 </div>
 
 
-<script defer src="/js/material.min.js"></script>
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-84591951-1', 'auto');
-    ga('send', 'pageview');
-</script>
+<script defer src="{{ site.baseurl }}/js/material.min.js"></script>
 </body>
 </html>

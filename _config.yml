@@ -19,8 +19,10 @@ description: > # this means to ignore newlines until "baseurl:"
   Ik wil graag goed geinformeerd zijn over de tekenen vóór de eindtijd.
   Als ik deze tekenen niet ken zou al het nieuws me wel bang kunnen maken.
   Met deze website hoop ik dat we ons niet gek hoeven te laten maken.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://end-times-signs.com" # the base hostname & protocol for your site
+
+url: https://tomasvanrijsse.github.io # the base hostname & protocol for your site
+baseurl: /the-last-signs # the subpath of your site, e.g. /blog
+
 github_username:  tomasvanrijsse
 
 # Build settings
