@@ -26,3 +26,8 @@ github_username:  tomasvanrijsse
 # Build settings
 markdown: kramdown
 theme: minima
+
+collections:
+  chapters:
+    output: true
+    permalink: /hoofdstuk/:path/

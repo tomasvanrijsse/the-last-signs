@@ -1,23 +1,51 @@
 ---
-layout: default
+layout: home
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">Welcome</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+        Het doel van deze site is om de profetische bijbelteksten over de eindtijd begrijpelijker te maken. Daarbij probeer ik te focussen op de tekenen die als laatste zullen gebeuren voordat Gods eeuwige rijk komt.
+        <ul>
+            <li>Daniël 7-12</li>
+            <li>Jesaja 24-27</li>
+            <li>Openbaringen</li>
+            <li>1-Tessalonicenzen 4,5</li>
+        </ul>
+    </div>
+    <!--<div class="mdl-card__actions mdl-card&#45;&#45;border">
+        <a class="mdl-button mdl-button&#45;&#45;colored mdl-js-button mdl-js-ripple-effect">
+            Get Started
+        </a>
+    </div>
+    <div class="mdl-card__menu">
+        <button class="mdl-button mdl-button&#45;&#45;icon mdl-js-button mdl-js-ripple-effect">
+            <i class="material-icons">share</i>
+        </button>
+    </div>-->
 </div>
+
+{% for chapter in site.chapters %}
+<div class="mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">{{ chapter.title }}</h2>
+        {% if chapter.date-unclear %}
+        <i id="warning{{ forloop.index }}" class="icon warning material-icons">report_problem</i>
+        <div class="mdl-tooltip" data-mdl-for="warning{{ forloop.index }}">
+            Er is geen referentie<br/>naar de eindtijd in deze tekst
+        </div>
+        {% endif %}
+    </div>
+    <div class="mdl-card__supporting-text">
+        {{ chapter.excerpt }}
+    </div>
+    <div class="mdl-card__actions mdl-card&#45;&#45;border">
+        <a href="{{ chapter.url | prepend: site.baseurl }}" class="mdl-button mdl-button&#45;&#45;colored mdl-js-button mdl-js-ripple-effect">
+            Lees verder
+        </a>
+    </div>
+</div>
+{% endfor %}
+
